@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İletişim | Çengelköy Mola Cafe</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+          rel="stylesheet" />
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-yellow-700">Çengelköy Mola Cafe</a>
+            <div class="space-x-6">
+                <a href="index.html" class="hover:text-yellow-700">Ana Sayfa</a>
+                <a href="menu.html" class="hover:text-yellow-700">Menü</a>
+                <a href="blog.html" class="hover:text-yellow-700">Blog</a>
+                <a href="hakkimizda.html" class="hover:text-yellow-700">Hakkımızda</a>
+                <a href="iletisim.html" class="hover:text-yellow-700">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="bg-yellow-100 py-16 text-center">
+        <h1 class="text-4xl font-bold text-yellow-800 mb-4">Bize Ulaşın</h1>
+        <p class="max-w-2xl mx-auto text-gray-700 text-lg">
+            Sorularınız, önerileriniz veya sipariş talepleriniz için bizimle iletişime geçebilirsiniz.
+        </p>
+    </section>
+
+    <!-- Content -->
+    <section class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-12">
+        <!-- İletişim Bilgileri -->
+        <div>
+            <h2 class="text-2xl font-bold text-yellow-800 mb-6">İletişim Bilgilerimiz</h2>
+            <p class="text-gray-700 mb-4">
+                📍 <strong>Adres:</strong> Çengelköy Mahallesi, Kuleli Caddesi No:45, Üsküdar / İstanbul
+            </p>
+            <p class="text-gray-700 mb-4">
+                ☎️ <strong>Telefon:</strong> <a href="tel:+905551234567" class="text-yellow-700 hover:underline">+90 555 123 45 67</a>
+            </p>
+            <p class="text-gray-700 mb-4">
+                📧 <strong>E-posta:</strong> <a href="mailto:info@molacafe.com" class="text-yellow-700 hover:underline">info@molacafe.com</a>
+            </p>
+            <p class="text-gray-700">
+                🕓 <strong>Çalışma Saatleri:</strong> Her gün 06:00 - 00:00
+            </p>
+
+            <!-- Harita -->
+            <div class="mt-8">
+                <iframe src="https://www.google.com/maps?q=Çengelköy,+Üsküdar,+İstanbul&output=embed"
+                        class="w-full h-64 rounded-2xl shadow-lg border-0"
+                        allowfullscreen=""
+                        loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- İletişim Formu -->
+        <div>
+            <h2 class="text-2xl font-bold text-yellow-800 mb-6">Mesaj Gönderin</h2>
+            <form class="space-y-4 bg-white p-6 rounded-2xl shadow-lg">
+                <div>
+                    <label for="name" class="block mb-2 font-semibold">Ad Soyad</label>
+                    <input type="text"
+                           id="name"
+                           class="w-full border-gray-300 border rounded-lg p-3 focus:ring-2 focus:ring-yellow-400 outline-none"
+                           placeholder="Adınızı girin" />
+                </div>
+                <div>
+                    <label for="email" class="block mb-2 font-semibold">E-posta</label>
+                    <input type="email"
+                           id="email"
+                           class="w-full border-gray-300 border rounded-lg p-3 focus:ring-2 focus:ring-yellow-400 outline-none"
+                           placeholder="E-posta adresiniz" />
+                </div>
+                <div>
+                    <label for="message" class="block mb-2 font-semibold">Mesajınız</label>
+                    <textarea id="message"
+                              rows="4"
+                              class="w-full border-gray-300 border rounded-lg p-3 focus:ring-2 focus:ring-yellow-400 outline-none"
+                              placeholder="Mesajınızı yazın"></textarea>
+                </div>
+                <button type="submit"
+                        class="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-200 w-full">
+                    Gönder
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-yellow-700 text-white text-center py-6 mt-12">
+        <p>© 2025 Çengelköy Mola Cafe | Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>

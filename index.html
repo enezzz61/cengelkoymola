@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Çengelköy Mola Cafe</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-amber-50 text-gray-800 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-yellow-700">Çengelköy Mola Cafe</a>
+            <div class="space-x-6">
+                <a href="index.html" class="hover:text-yellow-700">Ana Sayfa</a>
+                <a href="menu.html" class="hover:text-yellow-700">Menü</a>
+                <a href="blog.html" class="hover:text-yellow-700">Blog</a>
+                <a href="hakkimizda.html" class="hover:text-yellow-700">Hakkımızda</a>
+                <a href="iletisim.html" class="hover:text-yellow-700">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero"
+             class="relative bg-cover bg-center h-[80vh] flex justify-center items-center text-center text-white transition-all duration-700 opacity-0 scale-95"
+             style="background-image: url('img/pexels-jayoke-851555.jpg');">
+
+        <!-- Siyah yarı saydam katman -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        <!-- İçerik -->
+        <div class="relative z-10 px-6 max-w-2xl">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">Bir Mola, Bir Lezzet...</h2>
+            <p class="text-lg md:text-xl mb-6">Poğaçadan pastaya, çaydan kahveye kadar her şey Çengelköy Mola Cafe’de!</p>
+            <a href="menu.html"
+               class="bg-amber-600 hover:bg-amber-500 text-white px-6 py-3 rounded-lg font-medium transition">
+                Menümüze
+                Göz At
+            </a>
+        </div>
+
+        <!-- Kapat butonu -->
+        <button id="closeHero"
+                class="absolute top-4 right-4 bg-white text-black font-bold rounded-full w-10 h-10 flex justify-center items-center shadow-lg hover:bg-gray-200 transition">
+            ✖
+        </button>
+    </section>
+
+    <script>
+    // Hero animasyonla açılsın
+    window.addEventListener('load', () => {
+        const hero = document.getElementById('hero');
+        setTimeout(() => {
+            hero.classList.remove('opacity-0', 'scale-95');
+            hero.classList.add('opacity-100', 'scale-100');
+        }, 200);
+    });
+
+    // Kapat butonuna tıklanınca kaybolsun
+    document.getElementById('closeHero').addEventListener('click', () => {
+        const hero = document.getElementById('hero');
+        hero.classList.add('opacity-0', 'scale-90');
+        setTimeout(() => {
+            hero.style.display = 'none';
+        }, 500);
+    });
+    </script>
+
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 1s ease-out forwards;
+        }
+    </style>
+
+
+    <!-- Hakkımızda kısa bilgi -->
+    <section class="container mx-auto py-16 px-6 text-center">
+        <h3 class="text-3xl font-semibold mb-6 text-amber-800">Çengelköy’ün Sıcak Noktası</h3>
+        <p class="max-w-2xl mx-auto text-lg leading-relaxed">
+            İstanbul’un kalbinde, Çengelköy’de güne sıcacık bir kahveyle başlamanın,
+            taze poğaçalar ve lezzetli tatlılarla günü tatlandırmanın tam zamanı.
+            Mola Cafe, her sabah 06:00’da kapılarını açıyor ve gece yarısına kadar hizmet veriyor.
+        </p>
+    </section>
+
+    <!-- Çalışma Saatleri -->
+    <section class="bg-amber-100 py-12">
+        <div class="container mx-auto text-center">
+            <h3 class="text-2xl font-semibold mb-4 text-amber-800">Çalışma Saatleri</h3>
+            <p class="text-lg">Her Gün: <span class="font-bold">06:00 - 00:00</span></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-yellow-700 text-white text-center py-6 mt-12">
+        <p>© 2025 Çengelköy Mola Cafe | Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>
